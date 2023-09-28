@@ -1,0 +1,29 @@
+{
+  "name": "todolist-oop-ts",
+  "version": "1.0.0",
+  "description": "TodoList With Typescript OOP",
+  "main": "index.html",
+  "scripts": {
+    "test": "npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miladjs/TodoList-TypeScript-OOP.git"
+  },
+  "keywords": [
+    "Typescript",
+    "oop",
+    "webpack",
+    "todolist"
+  ],
+  "author": "Milad Roknadini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miladjs/TodoList-TypeScript-OOP/issues"
+  },
+  "homepage": "https://github.com/miladjs/TodoList-TypeScript-OOP#readme",
+  "dependencies": {
+    "sass": "^1.68.0",
+    "typescript": "^5.2.2"
+  }
+}
