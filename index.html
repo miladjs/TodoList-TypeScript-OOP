@@ -7,63 +7,40 @@
     <title>TodoList With TypeScript OOP</title>
   </head>
   <body>
+    <!-- Project Template -->
+    <template>
+      <li draggable="true">
+        <h3></h3>
+        <p></p>
+        <span></span>
+      </li>
+    </template>
+
+    <!-- Project List Template -->
+    <template>
+      <div class="project-list">
+        <h2></h2>
+        <ul></ul>
+      </div>
+    </template>
+
+    <!-- Add Project Template -->
+    <template>
+      <div class="add-project">
+        <div class="form-control">
+          <label for=""></label>
+          <input id="" type="text" />
+        </div>
+      </div>
+    </template>
+
+    <!-- Main App -->
     <div class="container">
       <header>
         <div class="logo"><b>Project Management</b></div>
       </header>
       <main class="app">
-        <div class="add-project">
-          <div class="form-control">
-            <label for="title">Title</label>
-            <input id="title" type="text" />
-          </div>
-          <div class="form-control">
-            <label for="description">description</label>
-            <input id="description" type="text" />
-          </div>
-          <div class="form-control">
-            <label for="people">People</label>
-            <input id="people" type="number" />
-          </div>
-          <button>Add new project</button>
-        </div>
-        <div class="projects">
-          <div class="project-list">
-            <h2>Project Start</h2>
-            <ul>
-              <li draggable="true">
-                <h3>Todolist</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                <span> people 5 </span>
-              </li>
-              <li draggable="true">
-                <h3>Todolist</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                <span> people 5 </span>
-              </li>
-            </ul>
-          </div>
-          <div class="project-list">
-            <h2>Project Active</h2>
-            <ul>
-              <li draggable="true">
-                <h3>Todolist</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                <span> people 5 </span>
-              </li>
-            </ul>
-          </div>
-          <div class="project-list">
-            <h2>Project completed</h2>
-            <ul>
-              <li draggable="true">
-                <h3>Todolist</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                <span> people 5 </span>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <div class="projects"></div>
       </main>
       <script src="/dist/bundle.js"></script>
     </div>
