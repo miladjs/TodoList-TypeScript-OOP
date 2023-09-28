@@ -7,8 +7,8 @@
     <title>TodoList With TypeScript OOP</title>
   </head>
   <body>
-    <!-- Project Template -->
-    <template>
+    <!-- Todo Template -->
+    <template id="todoTemp">
       <li draggable="true">
         <h3></h3>
         <p></p>
@@ -16,32 +16,45 @@
       </li>
     </template>
 
-    <!-- Project List Template -->
-    <template>
-      <div class="project-list">
+    <!-- Todo List Template -->
+    <template id="todoListTemp">
+      <div class="Todo-list">
         <h2></h2>
         <ul></ul>
       </div>
     </template>
 
-    <!-- Add Project Template -->
-    <template>
-      <div class="add-project">
+    <!-- Add Todo Template -->
+    <template id="todoAddTemp">
+      <form class="add-Todo">
         <div class="form-control">
-          <label for=""></label>
-          <input id="" type="text" />
+          <label for="title">title</label>
+          <input id="title" type="text" />
         </div>
-      </div>
+        <div class="form-control">
+          <label for="Description">Description</label>
+          <input id="Description" type="text" />
+        </div>
+        <div class="form-control">
+          <label for="Priority">Priority</label>
+          <select id="Priority">
+            <option value="low">low</option>
+            <option value="medium">medium</option>
+            <option value="high">high</option>
+          </select>
+        </div>
+        <button>Add new todo</button>
+      </form>
     </template>
 
     <!-- Main App -->
     <div class="container">
       <header>
-        <div class="logo"><b>Project Management</b></div>
+        <div class="logo"><b>Todo Management</b></div>
       </header>
-      <main class="app">
-        <div class="projects"></div>
-      </main>
+      <div id="app">
+        <div class="Todos" id="todos"></div>
+      </div>
       <script src="/dist/bundle.js"></script>
     </div>
   </body>

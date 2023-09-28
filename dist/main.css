@@ -18,7 +18,8 @@ input {
 }
 
 button,
-input {
+input,
+select {
   padding: 12px 18px;
   outline: unset;
   border-radius: 10px;
@@ -51,65 +52,65 @@ header .logo b {
   font-size: 22px;
 }
 
-.add-project {
+.add-Todo {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 30px;
   margin-bottom: 50px;
 }
-.add-project button {
+.add-Todo button {
   background: #6236f5;
   color: #fff;
   width: 100%;
 }
-.add-project .form-control {
+.add-Todo .form-control {
   width: 100%;
 }
-.add-project .form-control label {
+.add-Todo .form-control label {
   margin-bottom: 9px;
   display: flex;
 }
-.add-project .form-control input {
+.add-Todo .form-control input {
   width: 100%;
 }
 
-.projects {
+.Todos {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
 }
 
-.project-list {
+.Todo-list {
   background: #fff;
   border: 1px solid #eee;
   padding: 20px;
   border-radius: 15px;
 }
-.project-list h2 {
+.Todo-list h2 {
   margin-bottom: 25px;
   font-size: 22px;
   margin-left: 5px;
 }
-.project-list ul {
+.Todo-list ul {
   border-radius: 15px;
   height: 100%;
 }
-.project-list ul li {
+.Todo-list ul li {
   background: #f4f4f4;
   margin-bottom: 15px;
   padding: 18px;
   border-radius: 10px;
   cursor: pointer;
 }
-.project-list ul li h3 {
+.Todo-list ul li h3 {
   margin-bottom: 10px;
   font-size: 18px;
 }
-.project-list ul li p {
+.Todo-list ul li p {
   margin-bottom: 20px;
 }
-.project-list ul li:last-child {
+.Todo-list ul li:last-child {
   margin-bottom: unset;
 }
 

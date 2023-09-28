@@ -1,4 +1,4 @@
-.add-project {
+.add-Todo {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -23,13 +23,13 @@
   }
 }
 
-.projects {
+.Todos {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
 }
 
-.project-list {
+.Todo-list {
   background: #fff;
   border: 1px solid #eee;
   padding: 20px;
