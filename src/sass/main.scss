@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000001;
+}
+
+body {
+  background: #f4f4f4;
+  font-family: "Raleway", sans-serif;
+}
+
+button,
+textarea,
+input {
+  font-family: inherit;
+}
+input {
+}
+button,
+input {
+  padding: 12px 18px;
+  outline: unset;
+  border-radius: 10px;
+  border: unset;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button {
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+ul {
+  list-style: none;
+}
+
+@import "header";
+@import "project";

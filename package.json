@@ -4,7 +4,8 @@
   "description": "TodoList With Typescript OOP",
   "main": "index.html",
   "scripts": {
-    "test": "npm run start"
+    "tsc": "tsc -w",
+    "sass": "sass ./src/sass/main.scss ./dist/main.css -w"
   },
   "repository": {
     "type": "git",

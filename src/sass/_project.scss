@@ -1,0 +1,68 @@
+.add-project {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 50px;
+
+  button {
+    background: #6236f5;
+    color: #fff;
+    width: 100%;
+  }
+
+  .form-control {
+    width: 100%;
+    label {
+      margin-bottom: 9px;
+      display: flex;
+    }
+    input {
+      width: 100%;
+    }
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.project-list {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 15px;
+
+  h2 {
+    margin-bottom: 25px;
+    font-size: 22px;
+    margin-left: 5px;
+  }
+
+  ul {
+    border-radius: 15px;
+    height: 100%;
+    li {
+      background: #f4f4f4;
+      margin-bottom: 15px;
+      padding: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+
+      h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      &:last-child {
+        margin-bottom: unset;
+      }
+    }
+  }
+}

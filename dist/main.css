@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000001;
+}
+
+body {
+  background: #f4f4f4;
+  font-family: "Raleway", sans-serif;
+}
+
+button,
+textarea,
+input {
+  font-family: inherit;
+}
+
+button,
+input {
+  padding: 12px 18px;
+  outline: unset;
+  border-radius: 10px;
+  border: unset;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: translateY(-5px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+header .logo b {
+  font-size: 22px;
+}
+
+.add-project {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.add-project button {
+  background: #6236f5;
+  color: #fff;
+  width: 100%;
+}
+.add-project .form-control {
+  width: 100%;
+}
+.add-project .form-control label {
+  margin-bottom: 9px;
+  display: flex;
+}
+.add-project .form-control input {
+  width: 100%;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.project-list {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 15px;
+}
+.project-list h2 {
+  margin-bottom: 25px;
+  font-size: 22px;
+  margin-left: 5px;
+}
+.project-list ul {
+  border-radius: 15px;
+  height: 100%;
+}
+.project-list ul li {
+  background: #f4f4f4;
+  margin-bottom: 15px;
+  padding: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.project-list ul li h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.project-list ul li p {
+  margin-bottom: 20px;
+}
+.project-list ul li:last-child {
+  margin-bottom: unset;
+}
+
+/*# sourceMappingURL=main.css.map */
