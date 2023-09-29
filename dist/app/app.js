@@ -1,0 +1,7 @@
+import { TodoInput } from "../class/TodoInput";
+import { Todolist } from "../class/Todolist";
+new TodoInput();
+new Todolist("completed");
+new Todolist("active");
+new Todolist("idea");
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2FwcC9hcHAudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxNQUFNLG9CQUFvQixDQUFDO0FBQy9DLE9BQU8sRUFBRSxRQUFRLEVBQUUsTUFBTSxtQkFBbUIsQ0FBQztBQUU3QyxJQUFJLFNBQVMsRUFBRSxDQUFDO0FBQ2hCLElBQUksUUFBUSxDQUFDLFdBQVcsQ0FBQyxDQUFDO0FBQzFCLElBQUksUUFBUSxDQUFDLFFBQVEsQ0FBQyxDQUFDO0FBQ3ZCLElBQUksUUFBUSxDQUFDLE1BQU0sQ0FBQyxDQUFDIn0=
