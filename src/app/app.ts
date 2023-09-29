@@ -1,11 +1,11 @@
 interface Draggable {
-  dragStartHandler(): void;
-  dragEndHandler(): void;
+  dragStartHandler(event: DragEvent): void;
+  dragEndHandler(event: DragEvent): void;
 }
 interface DragTarget {
-  dragOverHandler(): void;
-  dragDropHandler(): void;
-  dragLeaveHandler(): void;
+  dragOverHandler(event: DragEvent): void;
+  dragDropHandler(event: DragEvent): void;
+  dragLeaveHandler(event: DragEvent): void;
 }
 
 interface validatable {
@@ -95,7 +95,18 @@ class TodoState {
     const newTodo = new Todo(id, title, description, priority, TodoStatus.idea);
 
     this.todoList.push(newTodo);
+    this.updateTodo();
+  }
 
+  moveTodo(todoId: string, newStatus: TodoStatus) {
+    const TodoItem = this.todoList.find((todo) => todo.id === todoId);
+    if (TodoItem) {
+      TodoItem.status = newStatus;
+      this.updateTodo();
+    }
+  }
+
+  private updateTodo() {
     for (const listnerFn of this.listeners) {
       listnerFn(this.todoList.slice());
     }
@@ -143,7 +154,6 @@ class TodoItem
   constructor(HostId: string, todo: Todo) {
     super("todoTemp", HostId, todo.id);
     this.todo = todo;
-
     this.renderContent();
     this.configure();
   }
@@ -155,15 +165,15 @@ class TodoItem
   }
 
   @autobinder
-  dragStartHandler(): void {
+  dragStartHandler(event: DragEvent): void {
     this.element.classList.add("draggItem");
-    console.log("drag start");
+    event.dataTransfer!.setData("text/plain", this.todo.id);
+    event.dataTransfer!.effectAllowed = "move";
   }
 
   @autobinder
-  dragEndHandler(): void {
+  dragEndHandler(event: DragEvent): void {
     this.element.classList.remove("draggItem");
-    console.log("drag end");
   }
 
   configure(): void {
@@ -215,21 +225,33 @@ class Todolist
   }
 
   @autobinder
-  dragOverHandler(): void {
+  dragOverHandler(event: DragEvent): void {
+    event.preventDefault();
     this.element?.classList.add("dragg");
   }
 
   @autobinder
-  dragDropHandler(): void {}
+  dragDropHandler(event: DragEvent): void {
+    const todoID = event.dataTransfer!.getData("text/plain");
+    todoState.moveTodo(
+      todoID,
+      this.type === "active"
+        ? TodoStatus.active
+        : this.type === "completed"
+        ? TodoStatus.completed
+        : TodoStatus.idea
+    );
+    this.element?.classList.remove("dragg");
+  }
 
   @autobinder
-  dragLeaveHandler(): void {
+  dragLeaveHandler(event: DragEvent): void {
     this.element?.classList.remove("dragg");
   }
 
   configure(): void {
     this.element.addEventListener("dragover", this.dragOverHandler);
-    this.element.addEventListener("dragend", this.dragDropHandler);
+    this.element.addEventListener("drop", this.dragDropHandler);
     this.element.addEventListener("dragleave", this.dragLeaveHandler);
   }
 }
