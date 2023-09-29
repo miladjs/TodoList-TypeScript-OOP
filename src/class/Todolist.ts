@@ -1,10 +1,10 @@
 import { todoState } from "../state/todoState";
 import { autobinder } from "../utils/autobinder";
 import { DragTarget, Todo, TodoStatus } from "../utils/advancedTypes";
-import { Component } from "./Component";
-import { TodoItem } from "./TodoItem";
+import Component from "./Component";
+import TodoItem from "./TodoItem";
 
-export class Todolist
+export default class Todolist
   extends Component<HTMLDivElement, HTMLDivElement>
   implements DragTarget
 {

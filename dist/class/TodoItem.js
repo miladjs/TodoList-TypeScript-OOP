@@ -5,8 +5,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { autobinder } from "../utils/autobinder";
-import { Component } from "./Component";
-export class TodoItem extends Component {
+import Component from "./Component";
+export default class TodoItem extends Component {
     constructor(HostId, todo) {
         super("todoTemp", HostId, todo.id);
         this.todo = todo;

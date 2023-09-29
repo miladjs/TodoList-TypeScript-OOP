@@ -1,8 +1,8 @@
 import { autobinder } from "../utils/autobinder";
 import { Draggable, Todo } from "../utils/advancedTypes";
-import { Component } from "./Component";
+import Component from "./Component";
 
-export class TodoItem
+export default class TodoItem
   extends Component<HTMLUListElement, HTMLLIElement>
   implements Draggable
 {

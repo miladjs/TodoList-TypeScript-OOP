@@ -1,9 +1,12 @@
 import { todoState } from "../state/todoState";
 import { autobinder } from "../utils/autobinder";
 import { validatable, validate } from "../utils/validation";
-import { Component } from "./Component";
+import Component from "./Component";
 
-export class TodoInput extends Component<HTMLDivElement, HTMLFormElement> {
+export default class TodoInput extends Component<
+  HTMLDivElement,
+  HTMLFormElement
+> {
   titleInputElement: HTMLInputElement;
   descriptionInputElement: HTMLInputElement;
   priorityInputElement: HTMLSelectElement;

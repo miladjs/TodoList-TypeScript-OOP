@@ -7,9 +7,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { todoState } from "../state/todoState";
 import { autobinder } from "../utils/autobinder";
 import { TodoStatus } from "../utils/advancedTypes";
-import { Component } from "./Component";
-import { TodoItem } from "./TodoItem";
-export class Todolist extends Component {
+import Component from "./Component";
+import TodoItem from "./TodoItem";
+export default class Todolist extends Component {
     constructor(type) {
         super("todoListTemp", "todos", `${type}-Todos`);
         this.type = type;

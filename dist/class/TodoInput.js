@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { todoState } from "../state/todoState";
 import { autobinder } from "../utils/autobinder";
 import { validate } from "../utils/validation";
-import { Component } from "./Component";
-export class TodoInput extends Component {
+import Component from "./Component";
+export default class TodoInput extends Component {
     constructor() {
         super("todoAddTemp", "app");
         this.titleInputElement = this.element.querySelector("#title");
