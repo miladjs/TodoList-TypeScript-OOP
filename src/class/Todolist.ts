@@ -67,7 +67,7 @@ export class Todolist
   }
 
   @autobinder
-  dragLeaveHandler(event: DragEvent): void {
+  dragLeaveHandler(_: DragEvent): void {
     this.element?.classList.remove("dragg");
   }
 

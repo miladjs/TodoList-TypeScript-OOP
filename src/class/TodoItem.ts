@@ -29,7 +29,7 @@ export class TodoItem
   }
 
   @autobinder
-  dragEndHandler(event: DragEvent): void {
+  dragEndHandler(_: DragEvent): void {
     this.element.classList.remove("draggItem");
   }
 
