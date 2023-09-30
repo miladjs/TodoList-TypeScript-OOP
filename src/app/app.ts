@@ -1,3 +1,5 @@
+import "../sass/main.scss";
+
 import TodoInput from "../class/TodoInput";
 import Todolist from "../class/Todolist";
 

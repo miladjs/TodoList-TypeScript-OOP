@@ -4,8 +4,8 @@
   "description": "TodoList With Typescript OOP",
   "main": "index.html",
   "scripts": {
-    "tsc": "tsc -w",
-    "sass": "sass ./src/sass/main.scss ./dist/main.css -w"
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,17 @@
     "url": "https://github.com/miladjs/TodoList-TypeScript-OOP/issues"
   },
   "homepage": "https://github.com/miladjs/TodoList-TypeScript-OOP#readme",
-  "dependencies": {
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss-loader": "^7.3.3",
     "sass": "^1.68.0",
-    "typescript": "^5.2.2"
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
