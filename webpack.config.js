@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -7,6 +8,9 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+  },
+  optimization: {
+    minimizer: [new TerserPlugin()],
   },
   module: {
     rules: [
@@ -32,7 +36,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "main.css", // نام فایل CSS تولید شده
+      filename: "main.css",
     }),
   ],
 };
